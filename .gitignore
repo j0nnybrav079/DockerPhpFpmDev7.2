@@ -50,3 +50,8 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
+.idea/DockerPhpFpmDev7.2.iml
+.idea/inspectionProfiles/
+.idea/modules.xml
+.idea/php.xml
+.idea/vcs.xml
