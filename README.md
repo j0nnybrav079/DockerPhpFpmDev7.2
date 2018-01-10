@@ -18,6 +18,7 @@ This image offers the php 7.2-fpm-image including a bunch of helpful tools:
 - pdo 
 - pdo_pgsql 
 - pdo_mysql 
+- mysqli
 - pgsql 
 - sockets 
 - zip 
