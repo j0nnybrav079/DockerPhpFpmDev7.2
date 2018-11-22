@@ -15,6 +15,7 @@ This image offers the php 7.2-fpm-image including a bunch of helpful tools:
 - intl 
 - json 
 - opcache 
+- openssh
 - pdo 
 - pdo_pgsql 
 - pdo_mysql 
@@ -25,3 +26,9 @@ This image offers the php 7.2-fpm-image including a bunch of helpful tools:
 - xdebug 
 - apcu 
 - composer
+
+# Build information:
+```bash
+    $:docker build -t  dacoco/php_7-2_fpm_dev .
+    $:docker push dacoco/php_7-2_fpm_dev
+```  

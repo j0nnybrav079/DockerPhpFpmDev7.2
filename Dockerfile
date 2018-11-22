@@ -8,6 +8,7 @@ RUN apt-get update \
     && apt-get install -y \
         curl \
         git \
+        openssh-client \
         unzip \
         libpq-dev \
         libzip-dev \
@@ -32,7 +33,8 @@ RUN apt-get update \
         soap \
         zip \
         gd \
-    && docker-php-ext-configure gd \
+    && docker-php-ext-configure \
+        gd \
         --enable-gd-native-ttf \
         --with-jpeg-dir=/usr/lib \
         --with-freetype-dir=/usr/include/freetype2 \
@@ -54,3 +56,8 @@ RUN apt-get update \
         && php -r "unlink('composer-setup.php');" \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
+
+RUN apt-get update
+RUN apt-get install -y zlib1g-dev libicu-dev g++
+RUN docker-php-ext-configure intl
+RUN docker-php-ext-install intl
