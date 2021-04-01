@@ -7,6 +7,7 @@ ARG remoteIp
 RUN apt-get update \
     && apt-get install -y \
         git \
+        curl \
         openssh-client \
         unzip \
         libpq-dev \
